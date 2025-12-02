@@ -25,7 +25,7 @@ const navLinks: NavLink[] =[{
 
 const MenuBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const menuBarRef = useRef<HTMLDivElement>(null);
+  const menuBarRef = useRef<HTMLOListElement>(null);
 
   useEffect(() => {
     function handleClickOutside(e: any) {
