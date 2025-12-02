@@ -1,0 +1,56 @@
+#home, #about, #skills, #projects, #contact, section {
+  overflow-x: hidden;
+}
+
+
+#about article span, #home article .slide-in, #skills .skill-in, #projects .project-in:nth-child(odd), #contact .contact-right,#experience .experience-right {
+    display: inline-block;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 800ms ease, opacity 800ms ease;
+    will-change: transform, opacity; /* changed code */
+    backface-visibility: hidden;
+}
+
+#about article span.show, #home article .slide-in.show, #skills .skill-in.show, #projects .project-in:nth-child(odd).show, #contact .contact-right.show, #experience .experience-right.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#contact .contact-left, #experience .experience-left, #projects .project-in:nth-child(even) {
+    display: inline-block;
+    left:0;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 800ms ease, opacity 800ms ease;
+    will-change: transform, opacity; /* changed code */
+    backface-visibility: hidden;
+}
+
+#contact .contact-left.show, #experience .experience-left.show, #projects .project-in:nth-child(even).show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.custom-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.custom-list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 8px;
+}
+
+.custom-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--accent-font);
+  border-radius: 50%;
+}
