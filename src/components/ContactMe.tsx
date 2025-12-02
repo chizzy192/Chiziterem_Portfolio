@@ -53,7 +53,7 @@ const ContactMe = () => {
 
     
   return (
-    <section id="contact" className='h-auto md:min-h-screen px-5 sm:px-20 lg:px-10 xl:px-35 w-full relative flex justify-center items-center text-2xl text-start font-inter flex-col mb-40 md:mb-30 xl:mb-20'>
+    <section id="contact" className='h-auto md:min-h-screen px-5 sm:px-20 lg:px-10 xl:px-35 w-full relative flex justify-center items-center text-2xl text-start font-inter flex-col pb-40 md:mb-30 xl:pb-20'>
       <Header>Get In Touch</Header>
 
       <div className="bg-(--background) w-full h-auto lg:w-[70%] lg:h-105 rounded-2xl outline-2 outline-(--accent) flex max-lg:flex-col p-2.5 sm:p-5 lg:p-4 xl:p-8 justify-between items-center gap-6 sm:gap-4 xl:gap-10 shadow-lg">

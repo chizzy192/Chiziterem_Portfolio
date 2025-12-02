@@ -48,7 +48,7 @@ const Experience = () => {
     return () => observer.disconnect();
     }, []);
   return (
-    <section id="experience" className='h-auto md:min-h-screen px-5 sm:px-20 lg:px-10 xl:px-35 w-full relative flex justify-center items-center text-2xl text-start font-inter flex-col'>
+    <section id="experience" className='h-auto md:min-h-screen px-5 sm:px-20 lg:px-10 xl:px-35 w-full relative flex justify-center items-center text-2xl text-start font-inter flex-col pb-10'>
       <Header>Experience</Header>
       <p className="text-sm lg:text-2xl mb-4">
         Here is a glimpse of some of my experience...
