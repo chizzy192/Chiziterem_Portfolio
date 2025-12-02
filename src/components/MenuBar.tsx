@@ -19,8 +19,8 @@ const navLinks: NavLink[] =[{
   link: '/experience',
   name: 'Experience'
 }, {
-  link: '/Contact',
-  name: 'contact'
+  link: '/contact',
+  name: 'Contact'
 }]
 
 const MenuBar = () => {
