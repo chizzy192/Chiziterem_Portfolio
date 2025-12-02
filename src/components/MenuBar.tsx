@@ -1,4 +1,4 @@
-import { Menu, X } from "lucide-react";
+import { CircleEqual, CircleX } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 type NavLink = {
@@ -55,7 +55,7 @@ const MenuBar = () => {
       </ol>
     </nav>
 
-    <nav className={`relative sm:hidden w-9/10 flex justify-start items-center min-h-11 overflow-x-auto bg-[#bc8f8f] rounded-3xl px-4  ${!isOpen && 'box-shadow'}`}>
+    <nav className={`relative sm:hidden w-9/10 flex justify-start items-center min-h-11 overflow-x-auto bg-[#bc8f8f] rounded-3xl pl-4   ${!isOpen && 'box-shadow'}`}>
 
       {!isOpen && (
         <p className="font-playwrite text-(--accent-font)">Oluchkwu(Oluchi)</p>
@@ -63,15 +63,16 @@ const MenuBar = () => {
 
     <button 
       onClick={(e)=> {e.stopPropagation(); setIsOpen(true)}} 
-      className={`absolute  text-white right-0 w-5 h-5 ${isOpen ? "hidden" : "flex"} justify-center items-center outline-white outline-2 hover:text-white/50 hover:outline-white/50 rounded-4xl cursor-pointer active:scale-95 mx-5`} 
+      className={`absolute  text-white right-0  ${isOpen ? "hidden" : "flex"} justify-center items-center hover:text-white/50 hover:outline-white/50 cursor-pointer active:scale-95 ml-5 mr-2`} 
     >
-      <Menu className="w-5 h-5"/>
+      <CircleEqual className="w-8 h-8" />
     </button>
 
     {isOpen && (
       <ol ref={menuBarRef} className={`relative w-full flex flex-col justify-around text-md font-mono whitespace-nowrap gap-5 py-4 animate-in slide-in-from-bottom-10 fade-in duration-1000`}>
-        <button onClick={(e)=> {e.stopPropagation(); setIsOpen(false)}} className="absolute text-white right-0 top-0 w-5 h-5 my-4 flex justify-center items-center outline-white outline-2 hover:text-white/50 hover:outline-white/50 rounded-4xl cursor-pointer active:scale-95">
-          <X className="w-5 h-5"/>
+        <button onClick={(e)=> {e.stopPropagation(); setIsOpen(false)}} className="absolute text-white right-0 top-0 my-2 flex justify-center items-center px-2 hover:text-white/50 hover:outline-white/50 rounded-4xl cursor-pointer active:scale-95">
+          <CircleX className="w-7 h-7"/>
+          
         </button>
 
         {navLinks.map((navLink, i) => (

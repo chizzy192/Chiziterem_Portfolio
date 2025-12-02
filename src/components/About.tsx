@@ -14,7 +14,7 @@ const About = () => {
         }
       })
     }, {
-        rootMargin:'0px 0px -400px 400px'
+        rootMargin:'0px 0px -300px 400px'
     });
     
     const spans = document.querySelectorAll("#about article span");

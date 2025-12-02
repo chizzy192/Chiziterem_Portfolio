@@ -71,49 +71,53 @@ const Projects = () => {
           return (
             <div 
               key={i} 
-              className="group relative w-full h-80 overflow-hidden rounded-lg shadow-lg cursor-pointer project-in"
+              className="group relative w-full h-auto lg:h-80 overflow-hidden rounded-lg shadow-lg cursor-pointer project-in"
             >
+              
               <img 
                 src={imgSrc} 
                 alt={project.title} 
-                className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-105' 
+                loading='lazy'
+                className='w-full lg:h-full lg:object-cover transition-transform duration-500 group-hover:scale-105' 
               />
               
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4">
-                
-                {/* Top Icons */}
-                <div className="flex justify-end gap-3">
-                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-(--accent) flex justify-center items-center rounded-full">
-                    <Github className="w-6 h-6 text-white"/>
-                  </a>
-                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-(--accent) flex justify-center items-center rounded-full">
-                    <Link className="w-6 h-6 text-white"/>
-                  </a>
-                </div>
-
-               {/* Middle Stacks Display */}
-                <div className="flex justify-center items-center">
-                  <div className="flex gap-2 flex-wrap justify-center items-center bg-black/50 px-3 py-2 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    {project.stacks.map((stack, index) => (
-                      <span 
-                        key={index} 
-                        className="text-white text-xs font-medium bg-white/10 px-2 py-1 rounded"
-                      >
-                        {stack}
-                      </span>
-                    ))}
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 ">
+                  
+                  {/* Top Icons */}
+                  <div className="flex justify-end gap-3">
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className=" w-10 h-10 bg-(--accent) flex justify-center items-center rounded-full">
+                      <Github className="w-6 h-6 text-white"/>
+                    </a>
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-(--accent) flex justify-center items-center rounded-full">
+                      <Link className="w-6 h-6 text-white"/>
+                    </a>
                   </div>
+
+                {/* Middle Stacks Display */}
+                  <div className=" flex justify-center items-center">
+                    <div className="flex gap-2 flex-wrap justify-center items-center bg-black/50 px-3 py-2 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {project.stacks.map((stack, index) => (
+                        <span 
+                          key={index} 
+                          className="text-white text-xs font-medium bg-white/10 px-2 py-1 rounded"
+                        >
+                          {stack}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+
+                  {/* Bottom Details */}
+                  <div className='block text-left text-white'>
+                    <h4 className='font-bold text-lg'>{project.title}</h4>
+                    <p className='text-sm mt-1'>{project.description}</p>
+                  </div>
+
                 </div>
-
-
-                {/* Bottom Details */}
-                <div className='text-left text-white'>
-                  <h4 className='font-bold text-lg'>{project.title}</h4>
-                  <p className='text-sm mt-1'>{project.description}</p>
-                </div>
-
-              </div>
+              </a>
             </div>
           )
         })}

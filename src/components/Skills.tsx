@@ -81,10 +81,15 @@ const Skills = () => {
 
                 return (
                     <div key={i} className="skill-in">
-                        <div  className="bg-(--background) rounded-lg h-10 w-50 lg:h-15 shadow-md font-inter text-sm flex justify-center gap-4 items-center p-2 outline-pink-200 outline ">
-                    <img src={avatarSrc} alt={skill.skill} className="w-10 h-10" loading="lazy"/>
-                    <span>{skill.skill}</span>
-                    </div>
+                        <div  className="bg-(--background) rounded-lg h-10 w-50 lg:h-15 shadow-md font-inter text-sm flex justify-center gap-4 items-center p-2 outline-(--accent) outline-2 ">
+                            <img 
+                                src={avatarSrc} 
+                                alt={skill.skill} 
+                                className="w-10 h-10" 
+                                loading="lazy"
+                            />
+                            <span>{skill.skill}</span>
+                        </div>
                     </div>
                     
                 );

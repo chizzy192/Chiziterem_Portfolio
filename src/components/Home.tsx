@@ -1,6 +1,7 @@
 import { useEffect } from "react";
-import Socials from "./Socials"
-import '../components/style.css'
+import Socials from "./Socials";
+import '../components/style.css';
+import myPdf from '../../public/Eze_Chiziterem_Resume.pdf'
 
 const Home = () => {
     useEffect(() => {
@@ -37,7 +38,7 @@ const Home = () => {
                 </div>
                 <div className="slide-in">
                     <div className=" flex flex-col justify-center items-center gap-3 w-full">
-                        <a href="../../public/Chiziterem_Eze_Resume.pdf" download className="text-sm bg-(--accent) p-3 rounded-2xl cursor-pointer hover:bg-(--accent-font) active:scale-80 transition-all w-auto text-white font-bold flex justify-center items-center hover:scale-110">
+                        <a href={myPdf} download className="text-sm bg-(--accent) p-3 rounded-2xl cursor-pointer hover:bg-(--accent-font) active:scale-80 transition-all w-auto text-white font-bold flex justify-center items-center hover:scale-110">
                             DOWNLOAD RESUME
                         </a>
                         <Socials/>
