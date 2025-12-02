@@ -67,7 +67,7 @@ const Skills = () => {
     }, []);
 
   return (
-    <section id="skills" className='flex px-10 sm:px-20 lg:px-35 text-center text-2xl font-inter flex-col justify-center items-center h-auto sm:h-screen'>
+    <section id="skills" className='flex px-10 sm:px-20 lg:px-35 text-center text-2xl font-inter flex-col justify-center items-center h-auto sm:h-screen pb-10'>
         <Header>Skills (Tech Stacks)</Header>
         <p className="text-sm lg:text-2xl skill-in mb-4">I have quite a list of technical skills and I'm also exicted to learn more...</p>
 

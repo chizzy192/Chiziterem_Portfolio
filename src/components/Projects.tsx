@@ -56,7 +56,7 @@ const Projects = () => {
               return () => observer.disconnect();
             }, []);
   return (
-    <section id='projects' className='flex flex-col px-5 sm:px-20 lg:px-25 xl:px-35 text-center text-2xl font-inter justify-center items-center w-full h-auto sm:min-h-screen '>
+    <section id='projects' className='flex flex-col px-5 sm:px-20 lg:px-25 xl:px-35 text-center text-2xl font-inter justify-center items-center w-full h-auto sm:min-h-screen pb-10'>
       <Header>Projects</Header>
       <p className="text-sm lg:text-2xl mb-4">
         Most of my projects are beginner/junior level, but these are the ones that stood out for me!
