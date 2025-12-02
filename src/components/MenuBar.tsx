@@ -62,7 +62,7 @@ const MenuBar = () => {
       )}
 
     <button 
-      onClick={()=> { setIsOpen(true)}} 
+      onClick={(e)=> {e.stopPropagation(); setIsOpen(true)}} 
       className={`absolute  text-white right-0 w-5 h-5 ${isOpen ? "hidden" : "flex"} justify-center items-center outline-white outline-2 hover:text-white/50 hover:outline-white/50 rounded-4xl cursor-pointer active:scale-95 mx-5`} 
     >
       <Menu className="w-5 h-5"/>
@@ -70,7 +70,7 @@ const MenuBar = () => {
 
     {isOpen && (
       <ol ref={menuBarRef} className={`relative w-full flex flex-col justify-around text-md font-mono whitespace-nowrap gap-5 py-4 animate-in slide-in-from-bottom-10 fade-in duration-1000`}>
-        <button onClick={()=> {setIsOpen(false)}} className="absolute text-white right-0 top-0 w-5 h-5 my-4 flex justify-center items-center outline-white outline-2 hover:text-white/50 hover:outline-white/50 rounded-4xl cursor-pointer active:scale-95">
+        <button onClick={(e)=> {e.stopPropagation(); setIsOpen(false)}} className="absolute text-white right-0 top-0 w-5 h-5 my-4 flex justify-center items-center outline-white outline-2 hover:text-white/50 hover:outline-white/50 rounded-4xl cursor-pointer active:scale-95">
           <X className="w-5 h-5"/>
         </button>
 
