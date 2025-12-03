@@ -58,7 +58,7 @@ const MenuBar = () => {
     <nav className={`relative sm:hidden w-9/10 flex justify-start items-center min-h-11 overflow-x-auto bg-[#bc8f8f] rounded-3xl pl-4   ${!isOpen && 'box-shadow'}`}>
 
       {!isOpen && (
-        <p className="font-playwrite text-[#584343]">Oluchkwu(Oluchi)</p>
+        <p className="font-playwrite text-[#977474]">Oluchukwu(Oluchi)</p>
       )}
 
     <button 
