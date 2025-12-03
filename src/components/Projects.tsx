@@ -21,7 +21,7 @@ const projects: Project[] = [
     title:"Facility-Fix",
     description:"Facility Fix is a modern platform that makes handling repairs simple and fast. It connects people to trusted technicians and brings real-time updates to the entire maintenance process.",
     img:{facility},
-    stacks:['React', 'TailwindCSS', 'Supabase']
+    stacks:['JSX', 'TailwindCSS', 'Supabase']
   }, 
   {
     link:"https://landscape-journal.vercel.app/",
