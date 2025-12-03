@@ -8,6 +8,8 @@ import responsive from "../assets/image.webp"
 import js from "../assets/javascript.webp"
 import tailwind from "../assets/tailwindcss.webp"
 import supabase from "../assets/supabase.png"
+import ts from '../assets/typescript.webp'
+
 import { useEffect } from "react"
 import '../components/style.css'
 
@@ -41,6 +43,9 @@ const skills: Skill[] = [{
 }, {
     avatar:{supabase},
     skill:"Supabase"
+}, {
+    avatar:{ts},
+    skill: 'TypeScript'
 }]
 
 const Skills = () => {
@@ -50,8 +55,6 @@ const Skills = () => {
         entries.forEach(entry=> {
         if(entry.isIntersecting) {
             entry.target.classList.add("show")
-        } else {
-            entry.target.classList.remove("show")
         }
         })
     }, {

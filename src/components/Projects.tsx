@@ -4,7 +4,7 @@ import facility from "../assets/facility-fix.png"
 import landscape from '../assets/landscape-design.png'
 import { useEffect } from 'react';
 import '../components/style.css'
-
+import chiziterem from '../assets/chiziterem-portfolio.png'
 type Project = {
   link: string;
   github: string;
@@ -30,6 +30,14 @@ const projects: Project[] = [
     description:"Landscape Journal is a simple web app that lets users upload landscape photos, organize them, and perform full CRUD actions. It’s designed to make documenting, managing, and revisiting outdoor designs easy and intuitive.",
     img:{landscape},
     stacks:['HTML', 'CSS', 'JavaScript']
+  }, 
+  {
+    link: "https://chiziteremeze.vercel.app",
+    github: "https://github.com/chizzy192/Chiziterem_Portfolio",
+    title: "Personal Portfolio",
+    description: "A modern portfolio website built with React and Tailwind CSS, designed to showcase my projects, experience, and skills. It features a fully responsive UI, smooth animations, reusable components, and a dark/light mode toggle. The website is optimized for performance, accessibility, and mobile-first navigation.",
+    img: {chiziterem},
+    stacks:['TSX', 'TailwindCSS', 'Supabase']
   }
 ]
 
@@ -40,8 +48,6 @@ const Projects = () => {
                 entries.forEach(entry=> {
                   if(entry.isIntersecting) {
                       entry.target.classList.add("show")
-                  } else {
-                      entry.target.classList.remove("show")
                   }
                 })
               }, {

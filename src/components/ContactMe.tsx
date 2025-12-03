@@ -35,8 +35,6 @@ const ContactMe = () => {
         entries.forEach(entry=> {
         if(entry.isIntersecting) {
             entry.target.classList.add("show")
-        } else {
-            entry.target.classList.remove("show")
         }
         })
     }, {
@@ -114,7 +112,7 @@ const ContactMe = () => {
                         className="text-white hover:bg-(--accent-font) active:scale-90 cursor-pointer rounded-xl p-2 bg-(--accent) shadow-md flex w-fit justify-center items-center disabled:bg-(--accent-font) text-lg" 
                         disabled={loading}
                     >
-                        {loading ? (<Loader/>) : (
+                        {loading ? (<Loader className="animate-spin"/>) : (
                             <span className="flex w-auto justify-center items-center gap-2">
                                 Send Message <Send className="w-5 h-5"/>
                             </span>

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Socials from "./Socials";
 import '../components/style.css';
-import myPdf from '../../public/Eze_Chiziterem_Resume.pdf'
+import myPdf from '../../src/Eze_Chiziterem_Resume.pdf'
 
 const Home = () => {
     useEffect(() => {
@@ -10,8 +10,6 @@ const Home = () => {
         entries.forEach(entry=> {
         if(entry.isIntersecting) {
             entry.target.classList.add("show")
-        } else {
-            entry.target.classList.remove("show")
         }
         })
     }, {
